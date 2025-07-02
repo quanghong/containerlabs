@@ -1,0 +1,13 @@
+---
+name: 2vr
+topology:
+  nodes:
+    vr1:
+      kind: vr-xrv9k
+      image: quanghong/vr-xrv9k:7.9.1
+    vr2:
+      kind: vr-xrv9k
+      image: quanghong/vr-xrv9k:7.9.1      
+  
+  links:
+  - endpoints: ["vr1:eth1", "vr2:eth1"]

@@ -1,0 +1,17 @@
+---
+services:
+  contaierlab:
+    image: ghcr.io/srl-labs/clab
+    container_name: containerlab
+    privileged: true
+    tty: true
+    network_mode: host
+    pid: host
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/netns:/var/run/netns
+      - /etc/hosts:/etc/hosts
+      - /var/lib/docker/containers:/var/lib/docker/containers
+      - ./:/clabs
+    working_dir: /clabs
+    command: "containerlab deploy -t labs/2vr.yml"
