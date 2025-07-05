@@ -14,4 +14,4 @@ services:
       - /var/lib/docker/containers:/var/lib/docker/containers
       - ./:/clabs
     working_dir: /clabs
-    command: "containerlab deploy -t labs/2vr.yml"
+    command: "containerlab deploy -t labs/cisco_n9kv.yml"
