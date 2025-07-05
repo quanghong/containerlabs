@@ -1,0 +1,12 @@
+# containerlab deploy -t labs/cisco_n9kv.yml
+---
+name: cisco_n9kv
+mgmt:
+  network: "ip-fabric"
+  ipv4-subnet: "172.30.64.0/20"
+topology:
+  nodes:
+    nxos9k:
+      kind: cisco_n9kv
+      image: quanghong/cisco_n9kv:9.3.8
+      mgmt-ipv4: 172.30.64.11
